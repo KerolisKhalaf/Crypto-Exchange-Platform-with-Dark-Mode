@@ -1,0 +1,95 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Trade Cryptocurrency with 
+          <span class="gradient-text">Confidence</span>
+        </h1>
+        <p class="hero-description">
+          Experience the future of digital trading with our advanced cryptocurrency exchange platform. 
+          Secure, fast, and user-friendly trading for everyone.
+        </p>
+        <div class="hero-actions">
+          <a routerLink="/services" class="btn btn-primary">Start Trading</a>
+          <a routerLink="/about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="crypto-chart">
+          <div class="chart-header">
+            <h3>Live Market Data</h3>
+            <div class="market-status">
+              <span class="status-indicator active"></span>
+              <span>Live</span>
+            </div>
+          </div>
+          <div class="chart-content">
+            <div class="crypto-list">
+              <div class="crypto-item" *ngFor="let crypto of cryptoData">
+                <div class="crypto-info">
+                  <img [src]="crypto.icon" [alt]="crypto.name" class="crypto-icon">
+                  <div class="crypto-details">
+                    <span class="crypto-symbol">{{crypto.symbol}}</span>
+                    <span class="crypto-name">{{crypto.name}}</span>
+                  </div>
+                </div>
+                <div class="crypto-price">
+                  <span class="price">${{crypto.price}}</span>
+                  <span class="change" [class.positive]="crypto.change > 0" [class.negative]="crypto.change < 0">
+                    {{crypto.change > 0 ? '+' : ''}}{{crypto.change}}%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Choose Our Platform?</h2>
+      <p>Discover the features that make us the preferred choice for cryptocurrency trading</p>
+    </div>
+    <div class="grid grid-cols-3">
+      <div class="card feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path [attr.d]="feature.icon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>{{feature.title}}</h3>
+        <p>{{feature.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+  <div class="container">
+    <div class="grid grid-cols-4">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <div class="stat-number">{{stat.value}}</div>
+        <div class="stat-label">{{stat.label}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Start Trading?</h2>
+      <p>Join thousands of traders who trust our platform for their cryptocurrency investments</p>
+      <a routerLink="/contact" class="btn btn-primary">Get Started Today</a>
+    </div>
+  </div>
+</section>

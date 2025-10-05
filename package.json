@@ -1,0 +1,43 @@
+{
+  "name": "crypto-exchange-platform",
+  "version": "1.0.0",
+  "description": "A modern crypto exchange platform with dark mode support",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "build:gh-pages": "ng build --configuration production --base-href /crypto-exchange-platform/",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve": "ng serve --open",
+    "deploy": "ng build --configuration production --base-href /crypto-exchange-platform/ && npx angular-cli-ghpages --dir=dist/crypto-exchange-platform"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.0",
+    "@angular/cli": "^17.0.0",
+    "@angular/compiler-cli": "^17.0.0",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.2.0",
+    "angular-cli-ghpages": "^1.0.3"
+  }
+}

@@ -1,0 +1,139 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Our Trading Services</h1>
+      <p>Comprehensive cryptocurrency trading solutions designed for both beginners and professionals</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trading Features -->
+<section class="trading-features">
+  <div class="container">
+    <div class="section-header">
+      <h2>Trading Features</h2>
+      <p>Advanced tools and features to enhance your trading experience</p>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="feature-item" *ngFor="let feature of tradingFeatures">
+        <div class="feature-content">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path [attr.d]="feature.icon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>{{feature.title}}</h3>
+            <p>{{feature.description}}</p>
+            <ul class="feature-list">
+              <li *ngFor="let item of feature.features">{{item}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trading Pairs -->
+<section class="trading-pairs">
+  <div class="container">
+    <div class="section-header">
+      <h2>Popular Trading Pairs</h2>
+      <p>Trade with the most popular cryptocurrency pairs</p>
+    </div>
+    <div class="pairs-grid">
+      <div class="pair-card" *ngFor="let pair of tradingPairs">
+        <div class="pair-header">
+          <div class="pair-info">
+            <img [src]="pair.baseIcon" [alt]="pair.base" class="pair-icon">
+            <img [src]="pair.quoteIcon" [alt]="pair.quote" class="pair-icon quote-icon">
+            <span class="pair-symbol">{{pair.base}}/{{pair.quote}}</span>
+          </div>
+          <div class="pair-price">
+            <span class="price">${{pair.price}}</span>
+            <span class="change" [class.positive]="pair.change > 0" [class.negative]="pair.change < 0">
+              {{pair.change > 0 ? '+' : ''}}{{pair.change}}%
+            </span>
+          </div>
+        </div>
+        <div class="pair-stats">
+          <div class="stat">
+            <span class="stat-label">24h Volume</span>
+            <span class="stat-value">${{pair.volume}}</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">24h High</span>
+            <span class="stat-value">${{pair.high}}</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">24h Low</span>
+            <span class="stat-value">${{pair.low}}</span>
+          </div>
+        </div>
+        <button class="btn btn-primary w-full">Trade Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Advanced Tools -->
+<section class="advanced-tools">
+  <div class="container">
+    <div class="section-header">
+      <h2>Advanced Trading Tools</h2>
+      <p>Professional-grade tools for serious traders</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card" *ngFor="let tool of advancedTools">
+        <div class="tool-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path [attr.d]="tool.icon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>{{tool.title}}</h3>
+        <p>{{tool.description}}</p>
+        <div class="tool-features">
+          <span class="feature-tag" *ngFor="let feature of tool.features">{{feature}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fee Structure -->
+<section class="fee-structure">
+  <div class="container">
+    <div class="section-header">
+      <h2>Competitive Fee Structure</h2>
+      <p>Transparent and competitive trading fees</p>
+    </div>
+    <div class="fee-table">
+      <div class="table-header">
+        <div class="table-cell">Trading Volume (30 days)</div>
+        <div class="table-cell">Maker Fee</div>
+        <div class="table-cell">Taker Fee</div>
+      </div>
+      <div class="table-row" *ngFor="let tier of feeTiers">
+        <div class="table-cell">{{tier.volume}}</div>
+        <div class="table-cell">{{tier.maker}}%</div>
+        <div class="table-cell">{{tier.taker}}%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Start Trading Today</h2>
+      <p>Join thousands of traders and experience the future of cryptocurrency trading</p>
+      <div class="cta-actions">
+        <a routerLink="/contact" class="btn btn-primary">Create Account</a>
+        <a href="#" class="btn btn-secondary">View Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
