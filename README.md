@@ -4,13 +4,8 @@ A modern, responsive cryptocurrency exchange platform built with Angular 17, fea
 
 ## 🌐 Live Demo
 
-🔗 **[View Live Demo](https://your-username.github.io/crypto-exchange-platform)**
+🔗 **[View Live Demo](https://keroliskhalaf.github.io/Crypto-Exchange-Platform-with-Dark-Mode/)**
 
-## 📸 Screenshots
-
-![Home Page](https://via.placeholder.com/800x400/6366f1/ffffff?text=Home+Page)
-![Dark Mode](https://via.placeholder.com/800x400/1e293b/ffffff?text=Dark+Mode)
-![Services Page](https://via.placeholder.com/800x400/f8fafc/1e293b?text=Services+Page)
 
 ## 🚀 Features
 
